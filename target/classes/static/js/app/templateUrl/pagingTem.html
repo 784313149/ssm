@@ -1,0 +1,30 @@
+﻿<div>
+    <meta charset="utf-8" />
+    <div>
+        <div class="page-hint" ng-if="isGetLoading">{{ pageHint }}</div>
+        <ul class="paging-ul clear-float" ng-hide="noDataTrue">
+            <li class="all-data" ng-show="hasAllCount">共 {{ allCount }} 条数据 </li>
+            <li class="paging-item paging-prev" ng-class="{ 'page-disabled': selPage == 1 }" ng-click="prevPage()"><</li>
+            <li class="paging-item" ng-if="selPage > 3 && allPage > 5" ng-click="firstPage()">1</li>
+            <li class="paging-item page-disabled" ng-if="selPage > 4 && allPage > 5">...</li>
+            <li class="paging-item" ng-repeat="item in itemList" ng-click="checkPage(item)" ng-class="{active: isActivePage(item)}">
+                {{ item }}
+            </li>
+            <li class="paging-item page-disabled" ng-if="(selPage < (allPage - 3) && allPage > 5) || (selPage < (allPage - 5) && allPage <= 5) && hasAllCount">...</li>
+            <li class="paging-item" ng-if="(selPage < (allPage - 2) && allPage > 5) || (selPage < (allPage - 5) && allPage <= 5) && hasAllCount" ng-click="lastPage()">{{ allPage }}</li>
+            <li class="paging-item paging-next" ng-class="{ 'page-disabled': selPage == allPage }" ng-click="nextPage()">></li>
+            <li class="tool-data" ng-show="selectList.length > 0">
+                <div class="select-div">
+                    <select class="page-select" ng-model="pageSize" ng-change="changePageSize()">
+                        <option value="{{ item }}" ng-repeat="item in selectList">{{ item }} 条/页</option>
+                    </select>
+                    <i class="page-fa-select"></i>
+                </div>
+            </li>
+            <li class="tool-data" ng-show="inputPage">
+                跳至 
+                <input type="text" class="page-input" ng-model="pageInput" ng-keyup="keyup($event)" /> 页
+            </li>
+        </ul>
+    </div>
+</div>

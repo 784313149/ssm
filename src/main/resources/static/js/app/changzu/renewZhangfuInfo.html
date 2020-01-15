@@ -1,0 +1,105 @@
+﻿<div class="talking-about animation-content padding-content">
+    <meta charset="utf-8">
+    <form name="propertyForm" autocomplete="off" novalidate>
+        <div class="form-horizontal clear-float">
+            <div class="col-sm-6 eletRe-hint">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label eletRe-hint">续签前合同编码</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="input-public-max" name="contractCode" ng-model="contractCode" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 eletRe-hint">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label eletRe-hint">合同总年限月</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="input-public-max" name="totalltfe" ng-model="totalltfe" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 eletRe-hint">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label eletRe-hint">是否含税</label>
+                    <div class="col-sm-9">
+                        <div class="select-div">
+                            <select class="input-public-max" ng-model="isTax" ng-options="item.Value as item.Text for item in isNoDBList"></select>
+                            <i class="fa-select"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 eletRe-hint">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label eletRe-hint">税金</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="input-public-max" name="tax" ng-model="tax" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 eletRe-hint">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label eletRe-hint">年租金(含税)</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="input-public-max" name="annualrent" ng-model="annualrent" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 eletRe-hint">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label eletRe-hint">合同总金额(含税)</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="input-public-max" name="totalMoney" ng-model="totalMoney" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 eletRe-hint">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label eletRe-hint">涨幅</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="input-public-max" name="appreciate" ng-model="appreciate" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 eletRe-hint">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label eletRe-hint">续签合同编码</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="input-public-max" name="beforeCode" ng-model="beforeCode" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 eletRe-hint">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label eletRe-hint">续签备忘录</label>
+                    <div class="col-sm-9">
+                        <button class="btn btn-default float-left" ng-click="selFile()">文件上传</button>
+                        <i class="fa fa-check greenColor fa-check-ok" ng-if="filesFinish"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 eletRe-hint">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label eletRe-hint">续签前合同</label>
+                    <div class="col-sm-9">
+                        <button class="btn btn-default float-left" ng-click="selFile()">文件上传</button>
+                        <i class="fa fa-check greenColor fa-check-ok" ng-if="filesFinish"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 eletRe-hint">
+                <div class="form-group">
+                    <label class="elet-yichang control-label eletRe-hint">异常说明</label>
+                    <div class="col-sm-10">
+                        <textarea rows="4" class="textarea-public-max" ng-model="bak"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="btn-btn-div">
+            <div class="btn-center">
+                <button class="btn btn-primary btn-block" ng-click="saveOk()">保存</button>
+            </div>
+        </div>
+    </form>
+</div>

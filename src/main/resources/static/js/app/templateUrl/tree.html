@@ -1,0 +1,16 @@
+﻿<div>
+    <meta charset="utf-8" />
+    <ul class="tree-ul" ng-class="{'position-relative': treeList[0].F_ORG_CODE == 0 || treeList[0].F_ORG_CODE == null || !treeList[0].F_ORG_CODE}">
+        <li class="tree-i" ng-repeat="item in treeList" ng-click="checkItem(item, $event)">
+            <div  ng-class="{'itemCheck': isCheck(item)}">
+                <i class="fa" ng-click="faClick(item, $event)" ng-class="{ noChilden : !item.noSelectRecord, 'fa-caret-right': item.isShowChilden == 0 || item.isShowChilden == 1, ' fa-caret-down': item.isShowChilden == 2 || item.isShowChilden == 3 }"></i>
+                <a href="#">
+                    <div class="item-background"></div>
+                    <i class="fa fa-folder-o"></i>
+                    <span>{{ item.ORG_NAME }}</span>
+                </a>
+            </div>
+            <my-tree tree-list="item.children" click-item="clickItems()" ng-model="dataIds" old-list="oldList" ng-if="item.isShowChilden == 2 || item.isShowChilden == 3"></my-tree>
+        </li>
+    </ul>
+</div>

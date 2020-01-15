@@ -1,0 +1,12 @@
+﻿<div>
+    <meta charset="utf-8" />
+    <div class="process-icon">
+        <div class="process-icon-item" ng-repeat="item in stateList| orderBy: 'id'" repeat-finish="getDivWidth()">
+            <div class="process-icon-hint">{{ item.Text }}</div>
+            <div class="process-icon-chart" ng-class="{ blueIcon : ($index < subscript || subscript == stateList.length - 1), activeIcon : ($index == subscript && subscript !== stateList.length - 1) }"><i class="fa" ng-class="{ 'fa-check' : ($index < subscript || subscript == stateList.length - 1), 'fa-exclamation': ($index == subscript && subscript !== stateList.length - 1) }"></i></div>
+        </div>
+        <div class="processBackground">
+            <div class="color-background"></div>
+        </div>
+    </div>
+</div>

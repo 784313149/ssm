@@ -1,0 +1,138 @@
+﻿<div class="animation-content padding-content">
+    <meta charset="utf-8">
+    <div class="form-horizontal clear-float">
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">需求编码</label>
+                <div class="col-sm-8">
+                    <div class="input-public-max btnNoEdit">{{ requestId }}</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">内部验收日期<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <input type="text" class="input-public-max date-time" ng-model="acceptDate" />
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">是否完成装配<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <div class="select-div">
+                        <select class="input-public-max" ng-model="isFinishedAssemble" ng-options="item.Value as item.Text for item in isFinishedAssembleList"></select>
+                        <i class="fa-select"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">无法装配原因</label>
+                <div class="col-sm-8">
+                    <div class="select-div">
+                        <input type="text" class="input-public-max" ng-model="noAssembleReason" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">现场交付验收日期<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <input type="text" class="input-public-max date-time" ng-model="deliverSiteAcceptDate" />
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">客户设备安装情况</label>
+                <div class="col-sm-8">
+                    <input type="text" class="input-public-max" ng-model="customerDeviceInstall" />
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">纸质交付验收日期<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <input type="text" class="input-public-max date-time" ng-model="deliverCertAcceptDate" />
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">未交付原因<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <input type="text" class="input-public-max" ng-model="notDeliverRemark" />
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">起租日期<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <input type="text" class="input-public-max date-time" ng-model="rentDate" />
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">已交付未起租原因<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <input type="text" class="input-public-max" ng-model="deliveredNoRentReason" />
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">土建竣工资料是否完成编制<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <div class="select-div">
+                        <select class="input-public-max" ng-model="isFinishedTjData" ng-options="item.Value as item.Text for item in isFinishedTjDataList"></select>
+                        <i class="fa-select"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">配套竣工资料是否完成编制<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <div class="select-div">
+                        <select class="input-public-max" ng-model="isFinishedPtData" ng-options="item.Value as item.Text for item in isFinishedPtDataList"></select>
+                        <i class="fa-select"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">市电竣工资料是否完成编制<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <div class="select-div">
+                        <select class="input-public-max" ng-model="isFinishedSdData" ng-options="item.Value as item.Text for item in isFinishedSdDataList"></select>
+                        <i class="fa-select"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="btn-btn-div">
+        <div class="btn-center">
+            <button class="btn btn-primary btn-block" ng-click="save()">保存</button>
+        </div>
+    </div>
+</div>

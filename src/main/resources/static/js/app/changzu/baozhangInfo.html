@@ -1,0 +1,173 @@
+﻿<div class="talking-about animation-content padding-content">
+    <meta charset="utf-8">
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>操作</th>
+                    <th>序号</th>
+                    <th>站点名称</th>
+                    <th>合同名称</th>
+                    <th>合同编码</th>
+                    <th>场租支付单号</th>
+                    <th>租金</th>
+                    <th>税金</th>
+                    <th>应付总金额</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in baozhangList">
+                    <td>
+                        <button class="btn-no-border" ng-click="itemEdit(item)"><i class="fa fa-calendar-check-o"></i>操作</button>
+                    </td>
+                    <td ng-bind="$index+1"></td>
+                    <td ng-bind="item.SITE_NAME"></td>
+                    <td ng-bind="item.CONTRACT_NAME"></td>
+                    <td ng-bind="item.CONTRACT_CODE"></td>
+                    <td ng-bind="item.PAY_NUM"></td>
+                    <td ng-bind="item.RENT_TOTAL_PRICE"></td>
+                    <td ng-bind="item.TAX_TOTAL_PRICE"></td>
+                    <td ng-bind="item.PAY_TOTAL_PRICE"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="ngdialog ngdialog-theme-default max-ngdialog" ng-class="{ ngdialogClosing : isClose }" ng-show="isBaozhangInfo" style="display:block;">
+        <div class="ngdialog-overlay"></div>
+        <div class="ngdialog-content maxDialog">
+            <div class="z-panel-heading">
+                <span class="z-panel-title">{{ dialogTitle }}</span>
+                <i class="fa  fa-close close-off-x" ng-click="backoff()" title="关闭"></i>
+            </div>
+            <div class="z-panel-body">
+                <div class="form-horizontal clear-float" ng-repeat="item in detailList">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">场租支付单号</label>
+                            <div class="col-sm-8 padding-label">{{ item.PAY_NUM }}</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">付款金额(元)</label>
+                            <div class="col-sm-8 padding-label">{{ item.TOTAL_PAYMENT_LIST }}</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">最近支付日期</label>
+                            <div class="col-sm-8 padding-label">{{ item.ZDMC }}</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">核销日期</label>
+                            <div class="col-sm-8 padding-label">{{ item.ZDMC }}</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">支付起始时间</label>
+                            <div class="col-sm-8 padding-label">{{ item.PAYMENT_START }}</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">支付终止时间</label>
+                            <div class="col-sm-8 padding-label">{{ item.PAYMENT_END }}</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">租金支付类型</label>
+                            <div class="col-sm-8 padding-label">{{ item.PAY_METHOD }}</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">税金(元)</label>
+                            <div class="col-sm-8 padding-label">{{ item.TAX_TOTAL_PRICE }}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal clear-float">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">报账信息是否准确<span class="redColor">*</span></label>
+                            <div class="col-sm-8">
+                                <label class="radio-label" ng-class="{ selected: isexact == 1 }">
+                                    <i class="icon-radio"></i>
+                                    <span class="lbl-content">是</span>
+                                    <input type="radio" name="pregnant" ng-value="1" ng-model="isexact" class="content-radio" />
+                                </label>
+                                <label class="radio-label" ng-class="{ selected: isexact == 0 }">
+                                    <i class="icon-radio"></i>
+                                    <span class="lbl-content">否</span>
+                                    <input type="radio" name="pregnant" ng-value="0" ng-model="isexact" class="content-radio" />
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">发票信息<span class="redColor">*</span></label>
+                            <div class="col-sm-8">
+                                <button class="btn btn-default float-left position-relative" ng-class="{  btnUploadLoading : isUploadFile }" >文件上传 <div ng-disabled="isUploadFile" ngf-select="uploadExcelFile($files)" ng-model="uploadFile" title="文件上传" class="ng-file-upload-div"></div></button>
+                                <i class="fa fa-check greenColor fa-check-ok" ng-if="imgList.length > 0"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal clear-float"  ng-show="isexact == 0">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">修正税金(元)</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="input-public-max" name="tax" ng-model="tax" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">修正支付起始时间</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="input-public-max date-time" name="payStartDate" ng-model="payStartDate" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">修正支付结束时间</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="input-public-max date-time" name="payEndDate" ng-model="payEndDate" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal clear-float" ng-show="isexact == 0">
+                    <div class="input-phone-div">
+                        <div class="dialog-hint-block">未上传发票信息备注<span class="redColor">*</span></div>
+                        <textarea rows="3" class="textarea-public-max" ng-model="bak" placeholder="填写备注信息"></textarea>
+                    </div>
+                </div>
+                <div class="clear-float btn-btn-div">
+                    <div class="btn-center-div">
+                        <div class="btn-center">
+                            <button class="btn btn-primary btn-block" ng-class="{ btnActive : isUploadClick }" ng-disabled="isUploadClick" ng-click="saveOk()"><i class="fa-loading"></i>保存</button>
+                        </div>
+                        <div class="btn-center">
+                            <button class="btn btn-default btn-block" ng-click="backoff()">返回</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="img-view-div" ng-show="imgList.length > 0">
+                    <div class="search-box">
+                        <div class="search-title">文件列表</div>
+                    </div>
+                    <img-view file-list="imgList" delete-url="deleteUrl" is-delete="isDelete"></img-view>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

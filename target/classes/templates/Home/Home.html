@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>欢迎</title>
+    <script src="js/jquery/jquery-3.4.min.js"></script>
+</head>
+<body>
+<button class="button" id="logout" onclick="logout()" >退出登录</button>
+</body>
+<script type="text/javascript">
+
+    //退出登录
+    function logout() {
+        var  path = getRootPath();
+        $.ajax({
+            //请求方式
+            type : "POST",
+            //请求的媒体类型
+            contentType: "application/json;charset=UTF-8",
+            //请求地址
+            url : path + "/logout",
+            //请求成功
+            success : function(result) {
+                window.location.href = path + '/Login';
+            }
+        });
+    }
+
+    // 获取网站路径
+    function getRootPath() {
+        //获取当前网址，如： http://localhost:8088/test/test.jsp
+        var curPath = window.document.location.href;
+        //获取主机地址之后的目录，如： test/test.jsp
+        var pathName = window.document.location.pathname;
+        var pos = curPath.indexOf(pathName);
+        //获取主机地址，如： http://localhost:8088
+        var localhostPath = curPath.substring(0, pos);
+        //获取带"/"的项目名，如：/test
+        if (localhostPath.indexOf("localhost") != -1) {
+            var projectName = "";
+        } else {
+            var projectName = pathName.substring(0, pathName.substr(1).indexOf('/') + 1);
+        }
+        return (localhostPath + projectName);//发布前用此
+    }
+</script>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>登录</title>
+    <meta name="description" content="particles.js is a lightweight JavaScript library for creating particles.">
+    <meta name="author" content="Vincent Garreau" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- css -->
+    <link rel="stylesheet" media="screen" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/reset.css"/>
+    <!-- scripts -->
+    <script src="/js/jquery/jquery-3.4.min.js"></script>
+    <script src="/js/MD5.js"></script>
+</head>
+<body>
+
+<div id="particles-js">
+    <div class="login">
+        <div class="login-top">
+            登录
+        </div>
+        <div class="login-center clearfix">
+            <div class="login-center-img"><img src="/img/name.png"/></div>
+            <div class="login-center-input">
+                <input type="text" name="name" id="name" value="" placeholder="请输入您的用户名" onfocus="this.placeholder=''" onblur="this.placeholder='请输入您的用户名'"/>
+                <div class="login-center-input-text">用户名</div>
+            </div>
+        </div>
+        <div class="login-center clearfix">
+            <div class="login-center-img"><img src="/img/password.png"/></div>
+            <div class="login-center-input">
+                <input type="password" name="password" id="password" value="" placeholder="请输入您的密码" onfocus="this.placeholder=''" onblur="this.placeholder='请输入您的密码'"/>
+                <div class="login-center-input-text">密码</div>
+            </div>
+        </div>
+        <div class="login-error"> </div>
+        <div class="login-button">
+            登录
+        </div>
+    </div>
+    <div class="sk-rotating-plane"></div>
+</div>
+
+<script src="/js/particles.min.js"></script>
+<script src="/js/app.js"></script>
+<script type="text/javascript">
+
+    //点击登录
+    document.querySelector(".login-button").onclick = function(){
+        var path = getRootPath();
+        //请求参数
+        if($('#name').val() == ""){
+            $("div.login-error").html("账号不能为空");
+            return;
+        }
+        if($('#password').val() == ""){
+            $("div.login-error").html("密码不能为空");
+            return;
+        }
+        var ps = hex_md5($('#password').val());
+        //
+        $("div.login-error").html("");
+        $.ajax({
+            //请求方式
+            type : "POST",
+            //请求的媒体类型
+            contentType: "application/json;charset=UTF-8",
+            //请求地址
+            url : path + "/signIn",
+            //数据，json字符串
+            data : JSON.stringify({"name":$('#name').val(),"password":$('#password').val()}),
+            //请求成功
+            success : function(result) {
+                console.log(result);
+                if(result.retcode == 200){
+                    window.location.href = path + result.data;
+                }else{
+                    console.log(result.retmsg);
+                    $("div.login-error").html(result.retmsg);
+                }
+            },
+            //请求失败，包含具体的错误信息
+            error : function(e){
+                console.log(e.status);
+                console.log(e.responseText);
+            }
+        });
+    }
+
+    // 获取网站路径
+    function getRootPath() {
+        //获取当前网址，如： http://localhost:8088/test/test.jsp
+        var curPath = window.document.location.href;
+        //获取主机地址之后的目录，如： test/test.jsp
+        var pathName = window.document.location.pathname;
+        var pos = curPath.indexOf(pathName);
+        //获取主机地址，如： http://localhost:8088
+        var localhostPath = curPath.substring(0, pos);
+        //获取带"/"的项目名，如：/test
+        if (localhostPath.indexOf("localhost") != -1) {
+            var projectName = "";
+        } else {
+            var projectName = pathName.substring(0, pathName.substr(1).indexOf('/') + 1);
+        }
+        return (localhostPath + projectName);//发布前用此
+    }
+</script>
+</body>
+</html>

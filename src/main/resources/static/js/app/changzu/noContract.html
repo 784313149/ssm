@@ -1,0 +1,151 @@
+﻿<div class="talking-about animation-content padding-content">
+    <meta charset="utf-8">
+    <form name="propertyForm" autocomplete="off" novalidate>
+        <div class="form-horizontal clear-float">
+            <div class="col-sm-6 eletRe-hint">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label eletRe-hint">地市</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="input-public-max btnNoEdit" name="city" ng-model="city" disabled="disabled" readonly />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 eletRe-hint">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label eletRe-hint">区域</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="input-public-max btnNoEdit" name="area" ng-model="area" disabled="disabled" readonly />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 eletRe-hint">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label eletRe-hint">站点编码</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="input-public-max btnNoEdit" name="sitecode" ng-model="sitecode" disabled="disabled" readonly />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 eletRe-hint">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label eletRe-hint">站点名称</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="input-public-max btnNoEdit" name="stoname" ng-model="stoname" disabled="disabled" readonly />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 eletRe-hint">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label eletRe-hint">存量或新建</label>
+                    <div class="col-sm-9">
+                        <div class="select-div">
+                            <select class="input-public-max" ng-model="stockornew" ng-options="item for item in typeList"></select>
+                            <i class="fa-select"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 eletRe-hint">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label eletRe-hint">站点详细地址</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="input-public-max" name="stoaddress" ng-model="stoaddress" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 eletRe-hint">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label eletRe-hint">是否有成本</label>
+                    <div class="col-sm-9">
+                        <div class="select-div">
+                            <select class="input-public-max" ng-model="iscost" ng-options="item for item in typeList"></select>
+                            <i class="fa-select"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 eletRe-hint">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label eletRe-hint">机房属性</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="input-public-max" name="computerlab" ng-model="computerlab" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 eletRe-hint">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label eletRe-hint">财务有无长滩</label>
+                    <div class="col-sm-9">
+                        <div class="select-div">
+                            <select class="input-public-max" ng-model="financechangtan" ng-options="item for item in typeList"></select>
+                            <i class="fa-select"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 eletRe-hint">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label eletRe-hint">场租依据</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="input-public-max" name="basisofrent" ng-model="basisofrent" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 eletRe-hint">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label eletRe-hint">基站类型</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="input-public-max" name="stationtype" ng-model="stationtype" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 eletRe-hint">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label eletRe-hint">占地性质</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="input-public-max" name="natureofoccupation" ng-model="natureofoccupation" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 eletRe-hint">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label eletRe-hint">占地权属</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="input-public-max" name="landownership" ng-model="landownership" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 eletRe-hint">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label eletRe-hint">零成本证明材料</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="input-public-max" name="evidence" ng-model="evidence" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 eletRe-hint">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label eletRe-hint">免费依据</label>
+                    <div class="col-sm-9">
+                        <button class="btn btn-default float-left" ng-click="selFile()">文件上传</button>
+                        <i class="fa fa-check greenColor fa-check-ok" ng-if="filesFinish"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 eletRe-hint">
+                <div class="form-group">
+                    <label class="elet-yichang control-label eletRe-hint">零成本原因</label>
+                    <div class="col-sm-10">
+                        <textarea rows="4" class="textarea-public-max" ng-model="reason"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="btn-btn-div">
+            <div class="btn-center">
+                <button class="btn btn-primary btn-block" ng-click="saveOk()">保存</button>
+            </div>
+        </div>
+    </form>
+    <upload-file-dialog upload-url="uploadUrl" upload-post-data="uploadPostData" return-resp="returnResp" is-multiple="isMultiple" is-show-dialog="isShowDialog" post-state="postState" dialog-title="dialogTitle" model-url="modelUrl" file-accept="fileAccept" is-hint-success="isHintSuccess"></upload-file-dialog>
+</div>

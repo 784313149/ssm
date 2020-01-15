@@ -1,0 +1,32 @@
+﻿<div class="directive-left-list" ng-class="{ isHideCorp : hideRightList }">
+    <meta charset="utf-8" />
+    <div class="left-btn-show">
+        <span ng-click="hideLeft()" title="收缩/展开"></span>
+    </div>
+    <div class="data-list-border">
+        <div class="search-input-div">
+            <input type="text" class="search-input-list" placeholder="搜索" ng-model="searchName" ng-keyup="enterEvent($event)" /><button class="btn btn-default btn-search-i" ng-click="btnSearch()"><i class="fa fa-search"></i></button>
+        </div>
+        <div class="directive-data-div">
+            <div class="directive-data-list">
+                <div class="directive-ul-list">
+                    <div class="directive-data-item" ng-repeat="item in dataList" repeat-finish="renderFinish()" ng-class="{ isSel : isClick(item) }" ng-click="itemClick(item)">
+                        {{ item.name }}
+                    </div>
+                </div>
+                <div ng-hide="isNoScroll">
+                    <div class="loader-inner ball-pulse" ng-show="isLoading">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="check-goods-detail" ng-hide="isLoading">已经到底了</div>
+                </div>
+                <div class="no-staff" ng-if="isNoStaff">
+                    <img src="../Content/images/noRecord.png" />
+                    <div class="no-staff-div">暂无数据</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,210 @@
+﻿<div class="talking-about animation-content padding-content">
+    <meta charset="utf-8">
+    <div class="form-horizontal clear-float">
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">需求编号</label>
+                <div class="col-sm-8">
+                    <div class="input-public-max btnNoEdit">{{ requestId }}</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">地市<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <div class="select-div">
+                        <select class="input-public-max" ng-model="city" ng-change="selCity(city)" ng-options="item.Value as item.Text for item in cityList"></select>
+                        <i class="fa-select"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">区县<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <div class="select-div">
+                        <select class="input-public-max" ng-model="country" ng-options="item.Value as item.Text for item in countryList"></select>
+                        <i class="fa-select"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">需求方<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <div class="select-div">
+                        <select class="input-public-max" ng-model="requestDx" ng-init="requestDx = requestDxList[0]" ng-options="item for item in requestDxList"></select>
+                        <i class="fa-select"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">需求方编码</label>
+                <div class="col-sm-8">
+                    <input type="text" class="input-public-max" ng-model="operatorRequestCode " />
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">需求站名<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <input type="text" class="input-public-max" ng-model="requestName" />
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">需求类型<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <div class="select-div">
+                        <select class="input-public-max" ng-model="requestType" ng-options="item.Value as item.Text for item in requestTypeList"></select>
+                        <i class="fa-select"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">经度<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <input type="text" class="input-public-max" ng-model="longitude" />
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">纬度<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <input type="text" class="input-public-max" ng-model="latitude" />
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">难点等级</label>
+                <div class="col-sm-8">
+                    <div class="select-div">
+                        <select class="input-public-max" ng-model="difficultyLevel" ng-options="item.Value as item.Text for item in levelList"></select>
+                        <i class="fa-select"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">需求录入日期<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <input type="text" class="input-public-max date-time" ng-model="requestCreateTime" />
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">所属年份<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <div class="select-div">
+                        <select class="input-public-max" ng-model="belongPrjYear" ng-init="belongPrjYear = yearList[0].Value" ng-options="item.Value as item.Text for item in yearList"></select>
+                        <i class="fa-select"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">站点需求属性1</label>
+                <div class="col-sm-8">
+                    <input type="text" class="input-public-max" ng-model="siteRequestAttribute1" />
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">站点需求属性2</label>
+                <div class="col-sm-8">
+                    <input type="text" class="input-public-max" ng-model="siteRequestAttribute2" />
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">站点需求属性3</label>
+                <div class="col-sm-8">
+                    <input type="text" class="input-public-max" ng-model="siteRequestAttribute3" />
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">计划完工时间<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <input type="text" class="input-public-max date-time" ng-model="planFinishedTime" />
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">需求整体进度状态<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <div class="select-div">
+                        <select class="input-public-max" ng-model="overallProgressState" ng-options="item.Value as item.Text for item in overallProgressStateList"></select>
+                        <i class="fa-select"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">批次</label>
+                <div class="col-sm-8">
+                    <input type="text" class="input-public-max" ng-model="yyPrjStage" />
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">是否销项<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <div class="select-div">
+                        <select class="input-public-max" ng-model="isOutput" ng-options="item.Value as item.Text for item in isOutputList"></select>
+                        <i class="fa-select"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 eletRe-hint">
+            <div class="form-group">
+                <label class="elet-yichang control-label eletRe-hint">整合建议</label>
+                <div class="col-sm-10">
+                    <textarea rows="4" class="textarea-public-max" ng-model="integrationSuggest"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="btn-btn-div">
+        <div class="btn-center">
+            <button class="btn btn-primary btn-block" ng-click="save()">保存</button>
+        </div>
+    </div>
+</div>

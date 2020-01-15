@@ -1,0 +1,159 @@
+﻿<div class="talking-about animation-content padding-content">
+    <meta charset="utf-8">
+    <form name="propertyForm" novalidate autocomplete="off">
+        <div class="form-horizontal clear-float">
+            <div class="col-sm-6 eletRe-hint">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label eletRe-hint">站点名称</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="input-public-max btnNoEdit" name="stationName" ng-model="stationName" disabled="disabled" readonly />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 eletRe-hint">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label eletRe-hint">站点编码</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="input-public-max btnNoEdit" name="stationCode" ng-model="stationCode" disabled="disabled" readonly />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 eletRe-hint">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label eletRe-hint">合同编码</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="input-public-max btnNoEdit" name="contractCode" ng-model="contractCode" disabled="disabled" readonly />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 eletRe-hint">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label eletRe-hint">合同名称</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="input-public-max btnNoEdit" name="contractName" ng-model="contractName" disabled="disabled" readonly />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 eletRe-hint">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label eletRe-hint">基本年租金</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="input-public-max btnNoEdit" name="basicYearrent" ng-model="basicYearrent" disabled="disabled" readonly />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 eletRe-hint">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label eletRe-hint">代维单位</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="input-public-max btnNoEdit" name="dwdw" ng-model="dwdw" disabled="disabled" readonly />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 eletRe-hint">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label eletRe-hint">合同是否含税</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="input-public-max btnNoEdit" name="sfhs" ng-model="sfhs" disabled="disabled" readonly />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 eletRe-hint">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label eletRe-hint">卡片月摊销金额</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="input-public-max btnNoEdit" name="cardMonthJe" ng-model="cardMonthJe" disabled="disabled" readonly />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 eletRe-hint">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label eletRe-hint">卡片开始</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="input-public-max btnNoEdit" name="cardStartDate" ng-model="cardStartDate" disabled="disabled" readonly />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 eletRe-hint">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label eletRe-hint">卡片结束</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="input-public-max btnNoEdit" name="cardEndDate" ng-model="cardEndDate" disabled="disabled" readonly />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 eletRe-hint">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label eletRe-hint">税金</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="input-public-max" name="taxStr" ng-model="taxStr" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 eletRe-hint">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label eletRe-hint">年租金</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="input-public-max" name="sysRentYearStr" ng-model="sysRentYearStr" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 eletRe-hint">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label eletRe-hint">发票类型</label>
+                    <div class="col-sm-9">
+                        <div class="select-div">
+                            <select class="input-public-max" ng-model="fapiaoType" ng-options="item.Value as item.Text for item in fapiaoList"></select>
+                            <i class="fa-select"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 eletRe-hint">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label eletRe-hint">合同信息是否准确</label>
+                    <div class="col-sm-9">
+                        <div class="select-div">
+                            <select class="input-public-max" ng-model="infoRight" ng-options="item.Value as item.Text for item in isNoDBList"></select>
+                            <i class="fa-select"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 eletRe-hint">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label eletRe-hint">不准确内容</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="input-public-max" name="wrongContant" ng-model="wrongContant" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 eletRe-hint">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label eletRe-hint">合同文件</label>
+                    <div class="col-sm-9">
+                        <button class="btn btn-default float-left" ng-click="selFile()">文件上传</button>
+                        <i class="fa fa-check greenColor fa-check-ok" ng-if="imgList.length > 0"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clear-float btn-btn-div">
+            <div class="btn-center-div">
+                <div class="btn-center">
+                    <button class="btn btn-primary btn-block" ng-click="saveOk()">保存</button>
+                </div>
+                <div class="btn-center">
+                    <button class="btn btn-default btn-block" onclick="history.go(-1);">返回</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="img-view-div" ng-show="imgList.length > 0">
+        <div class="search-box">
+            <div class="search-title">文件列表</div>
+        </div>
+        <img-view file-list="imgList" delete-url="deleteUrl" is-delete="isDelete"></img-view>
+    </div>
+    <upload-file-dialog upload-url="uploadUrl" upload-post-data="uploadPostData" return-resp="returnResp" is-multiple="isMultiple" is-show-dialog="isShowDialog" post-state="postState" dialog-title="dialogTitle" model-url="modelUrl" file-accept="fileAccept" is-hint-success="isHintSuccess"></upload-file-dialog>
+</div>

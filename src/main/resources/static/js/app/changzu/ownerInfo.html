@@ -1,0 +1,149 @@
+﻿<div class="talking-about animation-content padding-content">
+    <meta charset="utf-8">
+    <form name="propertyForm" autocomplete="off" novalidate>
+        <div class="form-horizontal clear-float">
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label class="col-sm-5 control-label">业主名称</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="input-public-max" name="requestName" ng-model="requestName" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label class="col-sm-5 control-label">公共客商编码</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="input-public-max" name="city" ng-model="city" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label class="col-sm-5 control-label">业主类型</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="input-public-max" name="city" ng-model="city" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label class="col-sm-5 control-label">业主证件类型</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="input-public-max" name="city" ng-model="city" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label class="col-sm-5 control-label">业主证件号码</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="input-public-max" name="city" ng-model="city" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label class="col-sm-5 control-label">业主联系电话</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="input-public-max" name="city" ng-model="city" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label class="col-sm-5 control-label">业主企业法人</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="input-public-max" name="city" ng-model="city" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label class="col-sm-5 control-label">业主联系人</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="input-public-max" name="city" ng-model="city" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label class="col-sm-5 control-label">业主性别</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="input-public-max" name="city" ng-model="city" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label class="col-sm-5 control-label">业主联系人类型</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="input-public-max" name="city" ng-model="city" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label class="col-sm-5 control-label">联系人电话</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="input-public-max" name="city" ng-model="city" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="btn-btn-div">
+            <div class="btn-center">
+                <button class="btn btn-primary btn-block" type="submit">保存</button>
+            </div>
+        </div>
+    </form>
+    <div class="ngdialog ngdialog-theme-default" ng-class="{ ngdialogClosing : isClose }" ng-show="isFileUpload" style="display:block;">
+        <div class="ngdialog-overlay"></div>
+        <div class="ngdialog-content">
+            <div class="z-panel-heading">
+                <span class="z-panel-title">文件上传</span>
+                <span style="color:#ff0000;font-size:12px;padding-left:8px;">注:文件最大: 20MB,超出自动排除</span>
+                <i class="fa  fa-close close-off-x" ng-click="backoff()" title="关闭"></i>
+            </div>
+            <div class="z-panel-body file-upliad-body">
+                <div class="scale-loading" ng-class="{ scaleLoading : isUploading }">
+                    <div class="loader-inner line-scale upload-loading">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="loading-content">文件上传中...</div>
+                    <div class="mask-loading"></div>
+                </div>
+                <div class="input-phone-div">
+                    <label class="input-phone-hint">选择文件</label>
+                    <div class="btn btn-default btn-upload">
+                        选择文件
+                        <div ngf-select="uploadExcelFile($files)" ng-model="selFiles" ngf-multiple="true" ngf-keep="true" title="文件上传" class="ng-file-upload-div"></div>
+                    </div>
+                </div>
+                <div class="input-phone-div clear-float">
+                    <label class="input-phone-hint col-md-4">已选择文件</label>
+                    <div class="col-md-8 clear-padding">
+                        <div class="btn-upload-div sel-file-div" ng-repeat="item in fileList">
+                            <span class="icon-file icon_is_file"></span>
+                            <a title="{{ item.name }}" class="file-name-span">{{ item.name }}</a>
+                            <span class="close-span" ng-click="deleteFile($index)" title="删除">x</span>
+                            <div><span style="font-size: 12px;">大小: {{ item.length }}</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-btn-div">
+                    <div class="btn-sure-phone">
+                        <button class="btn btn-primary btn-block" ng-disabled="fileList.length == 0" title="确定" ng-click="sureUpload()"> 确定 </button>
+                    </div>
+                    <div class="btn-sure-return">
+                        <button class="btn btn-default btn-block" title="返回" ng-click="backoff()"> 返回 </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

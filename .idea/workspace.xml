@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="351f6b18-433c-406c-ac4c-7fc5a198893b" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="FxmlFile" />
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="E:\MavenWarehouse\.m2\repository" />
+        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
+        <option name="userSettingsFile" value="E:\MavenWarehouse\.m2\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1V6JgYBoWIG54gbGPgude3azS5t" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Facets" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RecentsManager">
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="com.lxf.ssm.Listener" />
+      <recent name="com.lxf.ssm.config" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.lxf.ssm.service.Impl" />
+      <recent name="com.lxf.ssm.service" />
+      <recent name="com.lxf.ssm.dao" />
+      <recent name="com.lxf.ssm.easyexcel" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\IdeaProjects\ssm\src\main\resources\static\js\vue" />
+      <recent name="E:\IdeaProjects\ssm\src\main\resources\static\js\jquery" />
+      <recent name="E:\IdeaProjects\ssm\src\main\resources\static\js" />
+      <recent name="E:\IdeaProjects\ssm\src\main\resources\static\img" />
+      <recent name="E:\IdeaProjects\ssm\src\main\resources\static\css" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.lxf.ssm.entity" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\IdeaProjects\ssm\src\main\resources\templates" />
+      <recent name="E:\IdeaProjects\ssm\src\main\resources\templates\Login" />
+      <recent name="E:\IdeaProjects\ssm\src\main\resources\static" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.SsmApplicationTests.contextLoads">
+    <configuration name="SsmApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ssm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lxf.ssm.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.lxf.ssm" />
+      <option name="MAIN_CLASS_NAME" value="com.lxf.ssm.SsmApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SsmApplicationTests.con" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ssm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lxf.ssm.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.lxf.ssm" />
+      <option name="MAIN_CLASS_NAME" value="com.lxf.ssm.SsmApplicationTests" />
+      <option name="METHOD_NAME" value="con" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SsmApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ssm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lxf.ssm.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.lxf.ssm" />
+      <option name="MAIN_CLASS_NAME" value="com.lxf.ssm.SsmApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SsmApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="ssm" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.lxf.ssm.SsmApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.SsmApplicationTests.contextLoads" />
+        <item itemvalue="JUnit.SsmApplicationTests.con" />
+        <item itemvalue="JUnit.SsmApplicationTests" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="351f6b18-433c-406c-ac4c-7fc5a198893b" name="Default Changelist" comment="" />
+      <created>1576567722938</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1576567722938</updated>
+      <workItem from="1576567726001" duration="5741000" />
+      <workItem from="1576632936219" duration="3204000" />
+      <workItem from="1576636210954" duration="233000" />
+      <workItem from="1576636516950" duration="12935000" />
+      <workItem from="1576657728358" duration="3832000" />
+      <workItem from="1576716236373" duration="14750000" />
+      <workItem from="1576745750054" duration="787000" />
+      <workItem from="1576804511519" duration="4203000" />
+      <workItem from="1576823195254" duration="2899000" />
+      <workItem from="1576828894558" duration="2641000" />
+      <workItem from="1576929342700" duration="1912000" />
+      <workItem from="1577321923011" duration="423000" />
+      <workItem from="1577322367356" duration="812000" />
+      <workItem from="1577323240298" duration="278000" />
+      <workItem from="1577323553581" duration="344000" />
+      <workItem from="1577324206437" duration="306000" />
+      <workItem from="1577326815239" duration="979000" />
+      <workItem from="1577327864062" duration="377000" />
+      <workItem from="1577328318400" duration="7714000" />
+      <workItem from="1577347697270" duration="1565000" />
+      <workItem from="1577350841945" duration="1526000" />
+      <workItem from="1577407916030" duration="12734000" />
+      <workItem from="1577434420517" duration="4639000" />
+      <workItem from="1577446384747" duration="3326000" />
+      <workItem from="1577502412787" duration="1801000" />
+      <workItem from="1577779255062" duration="812000" />
+      <workItem from="1578537067498" duration="161000" />
+      <workItem from="1578537246811" duration="55000" />
+      <workItem from="1578537316707" duration="264000" />
+      <workItem from="1578619477602" duration="14039000" />
+      <workItem from="1578879437987" duration="11094000" />
+      <workItem from="1578987471881" duration="7800000" />
+      <workItem from="1579048441880" duration="11495000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="361" y="71" key="#Inspections" timestamp="1577415914674">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="71" key="#Inspections/0.0.1536.824@0.0.1536.824" timestamp="1577415914674" />
+    <state x="361" y="71" width="814" height="730" key="#Intentions" timestamp="1576637848902">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="71" width="814" height="730" key="#Intentions/0.0.1536.824@0.0.1536.824" timestamp="1576637848902" />
+    <state x="508" y="215" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1576828653352">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="508" y="215" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1576828653352" />
+    <state x="574" y="96" key="#com.intellij.ide.util.MemberChooser" timestamp="1578995147360">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="574" y="96" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1578995147360" />
+    <state x="548" y="271" width="442" height="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1578990786054">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="548" y="271" width="442" height="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1578990786054" />
+    <state x="507" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1576638707922">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="507" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1576638707922" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1577418418957">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1577418418957" />
+    <state width="513" height="466" key="DebuggerActiveHint" timestamp="1579054286404">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="513" height="466" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1579054286404" />
+    <state x="630" y="174" width="438" height="519" key="FileChooserDialogImpl" timestamp="1579060043842">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="630" y="174" width="438" height="519" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1579060043842" />
+    <state x="579" y="276" width="382" height="173" key="Github.CreateGistDialog" timestamp="1579059735537">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="579" y="276" width="382" height="173" key="Github.CreateGistDialog/0.0.1536.824@0.0.1536.824" timestamp="1579059735537" />
+    <state x="644" y="303" width="272" height="218" key="Github.ShareDialog" timestamp="1579060009222">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="644" y="303" width="272" height="218" key="Github.ShareDialog/0.0.1536.824@0.0.1536.824" timestamp="1579060009222" />
+    <state width="746" height="302" key="GridCell.Tab.0.bottom" timestamp="1579059776496">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="746" height="302" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1579059776496" />
+    <state width="746" height="302" key="GridCell.Tab.0.center" timestamp="1579059776496">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="746" height="302" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1579059776496" />
+    <state width="746" height="302" key="GridCell.Tab.0.left" timestamp="1579059776496">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="746" height="302" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1579059776496" />
+    <state width="746" height="302" key="GridCell.Tab.0.right" timestamp="1579059776496">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="746" height="302" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1579059776496" />
+    <state width="746" height="302" key="GridCell.Tab.1.bottom" timestamp="1579059776496">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="746" height="302" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1579059776496" />
+    <state width="746" height="302" key="GridCell.Tab.1.center" timestamp="1579059776496">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="746" height="302" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1579059776496" />
+    <state width="746" height="302" key="GridCell.Tab.1.left" timestamp="1579059776496">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="746" height="302" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1579059776496" />
+    <state width="746" height="302" key="GridCell.Tab.1.right" timestamp="1579059776496">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="746" height="302" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1579059776496" />
+    <state width="1493" height="127" key="GridCell.Tab.2.bottom" timestamp="1576828871932">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="127" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1576828871932" />
+    <state width="1493" height="127" key="GridCell.Tab.2.center" timestamp="1576828871932">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="127" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1576828871932" />
+    <state width="1493" height="127" key="GridCell.Tab.2.left" timestamp="1576828871932">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="127" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1576828871932" />
+    <state width="1493" height="127" key="GridCell.Tab.2.right" timestamp="1576828871932">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="127" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1576828871932" />
+    <state x="299" y="67" key="Maven.ArtifactSearchDialog" timestamp="1578642855145">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="299" y="67" key="Maven.ArtifactSearchDialog/0.0.1536.824@0.0.1536.824" timestamp="1578642855145" />
+    <state x="408" y="110" key="NewModule_or_Project.wizard" timestamp="1576636325577">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="408" y="110" key="NewModule_or_Project.wizard/0.0.1536.824@0.0.1536.824" timestamp="1576636325577" />
+    <state x="269" y="71" key="SettingsEditor" timestamp="1579059493217">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="269" y="71" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1579059493217" />
+    <state x="289" y="207" key="com.intellij.javaee.MapExternalResourceDialog" timestamp="1576634929807">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="289" y="207" key="com.intellij.javaee.MapExternalResourceDialog/0.0.1536.824@0.0.1536.824" timestamp="1576634929807" />
+    <state x="526" y="130" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1576722820166">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="526" y="130" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1536.824@0.0.1536.824" timestamp="1576722820166" />
+    <state x="178" y="114" key="new project wizard" timestamp="1576636299852">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="178" y="114" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1576636299852" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/lxf/ssm/Listener/FileDataListener.java</url>
+          <line>68</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/lxf/ssm/Listener/FileDataListener.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/lxf/ssm/Listener/FileDataListener.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/lxf/ssm/Listener/FileDataListener.java</url>
+          <line>53</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/lxf/ssm/Listener/FileDataListener.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/lxf/ssm/easyexcel/EasyExcelValiHelper.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="65" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="excelCheckResult.successDtos.get(2)" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>

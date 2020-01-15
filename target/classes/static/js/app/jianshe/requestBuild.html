@@ -1,0 +1,501 @@
+﻿<div class="animation-content padding-content">
+    <meta charset="utf-8">
+    <div class="form-horizontal clear-float">
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">需求编码</label>
+                <div class="col-sm-8">
+                    <div class="input-public-max btnNoEdit">{{ requestId }}</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">工程状态<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <div class="select-div">
+                        <select class="input-public-max" ng-model="buildState" ng-options="item.Value as item.Text for item in buildStateList"></select>
+                        <i class="fa-select"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">监理委托单位<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <div class="select-div">
+                        <select class="input-public-max" ng-model="jlEntrustUnit" ng-options="item.Value as item.Text for item in jlEntrustUnitList"></select>
+                        <i class="fa-select"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">项目计划完工时间<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <input type="text" class="input-public-max date-time" ng-model="prjWholePlanFinishedTime" />
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">实际开工日期<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <input type="text" class="input-public-max date-time" ng-model="startDate" />
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">实际完工日期<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <input type="text" class="input-public-max date-time" ng-model="endDate" ng-blur="selEndDate()" />
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">未开完工补充说明<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <input type="text" class="input-public-max" ng-model="notStartRemark" />
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">土建委托单位<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <div class="select-div">
+                        <select class="input-public-max" ng-model="tjDeputeUnit" ng-options="item.Value as item.Text for item in tjDeputeUnitList"></select>
+                        <i class="fa-select"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">土建施工单位<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <div class="select-div">
+                        <select class="input-public-max" ng-model="tjBuilder" ng-options="item.Value as item.Text for item in tjBuilderList"></select>
+                        <i class="fa-select"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">土建委托时间<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <input type="text" class="input-public-max date-time" ng-model="tjDeputeDate" />
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">土建计划完工时间<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <input type="text" class="input-public-max date-time" ng-model="tjPlanFinishTime" />
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">土建实际完工日期<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <input type="text" class="input-public-max date-time" ng-model="tjEndDate" />
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">土建环节赔补费用（含税）<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <input type="text" class="input-public-max" ng-model="tjCompsPay" />
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">土建环节赔补原因<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <input type="text" class="input-public-max" ng-model="tjCompsReason" />
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">杆塔委托单位<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <div class="select-div">
+                        <select class="input-public-max" ng-model="gtDeputeUnit" ng-options="item.Value as item.Text for item in gtDeputeUnitList"></select>
+                        <i class="fa-select"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">杆塔施工单位<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <div class="select-div">
+                        <select class="input-public-max" ng-model="gtBuilder" ng-options="item.Value as item.Text for item in gtBuilderList"></select>
+                        <i class="fa-select"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">杆塔委托时间<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <input type="text" class="input-public-max date-time" ng-model="gtDeputeDate" />
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">杆塔计划完工时间<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <input type="text" class="input-public-max date-time" ng-model="gtPlanFinishTime" />
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">杆塔实际完工日期<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <input type="text" class="input-public-max date-time" ng-model="gtEndDate" />
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">杆塔环节赔补费用（含税）<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <input type="text" class="input-public-max" ng-model="gtCompsPay" />
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">杆塔环节赔补原因<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <input type="text" class="input-public-max" ng-model="gtCompsReason" />
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">杆塔是否到货<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <div class="select-div">
+                        <select class="input-public-max" ng-model="isDeliveredGt" ng-options="item.Value as item.Text for item in isDeliveredGtList"></select>
+                        <i class="fa-select"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">配套委托单位<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <div class="select-div">
+                        <select class="input-public-max" ng-model="ptDeputeUnit" ng-options="item.Value as item.Text for item in ptDeputeUnitList"></select>
+                        <i class="fa-select"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">配套施工单位<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <div class="select-div">
+                        <select class="input-public-max" ng-model="ptBuilder" ng-options="item.Value as item.Text for item in ptBuilderList"></select>
+                        <i class="fa-select"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">配套委托时间<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <input type="text" class="input-public-max date-time" ng-model="ptDeputeDate" />
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">配套计划完工时间<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <input type="text" class="input-public-max date-time" ng-model="ptPlanFinishTime" />
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">配套实际完工日期<span class="redColor" >*</span></label>
+                <div class="col-sm-8">
+                    <input type="text" class="input-public-max date-time" ng-model="ptEndDate" />
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">配套环节赔补费用（含税）<span class="redColor" >*</span></label>
+                <div class="col-sm-8">
+                    <input type="text" class="input-public-max" ng-model="ptCompsPay" />
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">配套环节赔补原因<span class="redColor" >*</span></label>
+                <div class="col-sm-8">
+                    <input type="text" class="input-public-max" ng-model="ptCompsReason" />
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">配套领料是否完成<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <div class="select-div">
+                        <select class="input-public-max" ng-model="isFinishedPt" ng-options="item.Value as item.Text for item in isFinishedPtList"></select>
+                        <i class="fa-select"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">外市电委托单位<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <div class="select-div">
+                        <select class="input-public-max" ng-model="pwDeputeUnit" ng-options="item.Value as item.Text for item in pwDeputeUnitList"></select>
+                        <i class="fa-select"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">市电施工单位<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <div class="select-div">
+                        <select class="input-public-max" ng-model="pwBuilder" ng-options="item.Value as item.Text for item in pwBuilderList"></select>
+                        <i class="fa-select"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">市电委托日期<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <input type="text" class="input-public-max" ng-model="pwDeputeDate" />
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">市电计划完工时间<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <input type="text" class="input-public-max date-time" ng-model="pwPlanFinishTime" />
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">市电实际完工时间<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <input type="text" class="input-public-max date-time" ng-model="pwEndDate" />
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">电力环节赔补费用（含税）<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <input type="text" class="input-public-max" ng-model="pwCompsPay" />
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">电力环节赔补原因<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <input type="text" class="input-public-max" ng-model="pwCompsReason" />
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">电力设计单位<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <div class="select-div">
+                        <select class="input-public-max" ng-model="elecDesignUnit" ng-options="item.Value as item.Text for item in elecDesignUnitList"></select>
+                        <i class="fa-select"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">电力监理单位<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <div class="select-div">
+                        <select class="input-public-max" ng-model="elecSupervisionUnit" ng-options="item.Value as item.Text for item in elecSupervisionUnitList"></select>
+                        <i class="fa-select"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">实际电力建设方案<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <input type="text" class="input-public-max" ng-model="actualElecBuildWay" />
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">电力结算造价<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <input type="text" class="input-public-max" ng-model="elecSettlementPrice" />
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">造价是否确认<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <div class="select-div">
+                        <select class="input-public-max" ng-model="isCheckedCost" ng-options="item.Value as item.Text for item in isCheckedCostList"></select>
+                        <i class="fa-select"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">新增供电局电表号<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <input type="text" class="input-public-max" ng-model="addElecSupportMeter" />
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">是否新增变压器<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <div class="select-div">
+                        <select class="input-public-max" ng-model="isAddTransformer" ng-options="item.Value as item.Text for item in isAddTransformerList"></select>
+                        <i class="fa-select"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">变压器容量<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <input type="text" class="input-public-max" ng-model="transformerCapacity" />
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">变压器预算造价</label>
+                <div class="col-sm-8">
+                    <input type="text" class="input-public-max" ng-model="transformerBudgetCost" />
+                </div>
+            </div>
+        </div>
+
+
+        
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">FSU委托厂家<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <div class="select-div">
+                        <select class="input-public-max" ng-model="fsuEntrustVender" ng-options="item.Value as item.Text for item in fsuEntrustVenderList"></select>
+                        <i class="fa-select"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">FSU施工厂家<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <div class="select-div">
+                        <select class="input-public-max" ng-model="fsuBuildFactory" ng-options="item.Value as item.Text for item in fsuBuildFactoryList"></select>
+                        <i class="fa-select"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">FSU安装委托时间<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <input type="text" class="input-public-max date-time" ng-model="fsuInstallTime" />
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">FSU计划完工时间<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <input type="text" class="input-public-max date-time" ng-model="fsuPlanFinishTime" />
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">FSU实际完工时间<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <input type="text" class="input-public-max date-time" ng-model="fsuFinishedTime" />
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">FSU是否已领料出库<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <div class="select-div">
+                        <select class="input-public-max" ng-model="isPickFsu" ng-options="item.Value as item.Text for item in isPickFsuList"></select>
+                        <i class="fa-select"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="btn-btn-div">
+        <div class="btn-center">
+            <button class="btn btn-primary btn-block" ng-click="save()">保存</button>
+        </div>
+    </div>
+</div>

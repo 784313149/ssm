@@ -1,0 +1,194 @@
+﻿<div class="design-phase animation-content padding-content">
+    <meta charset="utf-8" />
+    <div class="form-horizontal clear-float">
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">需求编号</label>
+                <div class="col-sm-9">
+                    <div class="input-public-max btnNoEdit">{{ requestId }}</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">选址渠道<span class="redColor">*</span></label>
+                <div class="col-sm-9">
+                    <div class="select-div">
+                        <select class="input-public-max" ng-model="selectionChannel" ng-options="item.Value as item.Text for item in selectionChannelList"></select>
+                        <i class="fa-select"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">选址责任单位<span class="redColor">*</span></label>
+                <div class="col-sm-9">
+                    <div class="select-div">
+                        <select class="input-public-max" ng-model="talkDutyUnit" ng-options="item.Value as item.Text for item in talkDutyUnitList"></select>
+                        <i class="fa-select"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">选址人员<span class="redColor">*</span></label>
+                <div class="col-sm-9">
+                    <input type="text" class="input-public-max" ng-model="talkAddrStaff" />
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">选址人联系电话<span class="redColor">*</span></label>
+                <div class="col-sm-9">
+                    <input type="text" class="input-public-max" ng-model="talkAddrStaffTel" />
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">选址进度<span class="redColor">*</span></label>
+                <div class="col-sm-9">
+                    <div class="select-div">
+                        <select class="input-public-max" ng-model="talkSchedule" ng-options="item.Value as item.Text for item in talkScheduleList"></select>
+                        <i class="fa-select"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">选址完成日期<span class="redColor">*</span></label>
+                <div class="col-sm-9">
+                    <input type="text" class="input-public-max date-time" ng-model="talkDate" ng-blur="selTalkDate()" />
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">选址费(含税)<span class="redColor">*</span></label>
+                <div class="col-sm-9">
+                    <input type="text" class="input-public-max" ng-model="talkSelectionSite" />
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">选址费(不含税)<span class="redColor">*</span></label>
+                <div class="col-sm-9">
+                    <input type="text" class="input-public-max" ng-model="selectionNolate" />
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">选址费税率(％)<span class="redColor">*</span></label>
+                <div class="col-sm-9">
+                    <input type="text" class="input-public-max" ng-model="selectionLate" />
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">选址奖励金<span class="redColor">*</span></label>
+                <div class="col-sm-9">
+                    <input type="text" class="input-public-max" ng-model="siteSelectionAward" />
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">选址费发票类型<span class="redColor">*</span></label>
+                <div class="col-sm-9">
+                    <div class="select-div">
+                        <select class="input-public-max" ng-model="selectionBillType" ng-options="item.Value as item.Text for item in selectionBillTypeList"></select>
+                        <i class="fa-select"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">是否需要业主合同<span class="redColor">*</span></label>
+                <div class="col-sm-9">
+                    <div class="select-div">
+                        <select class="input-public-max" ng-model="ifContract" ng-options="item.Value as item.Text for item in ifContractList"></select>
+                        <i class="fa-select"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">选址合同编码<span class="redColor">*</span></label>
+                <div class="col-sm-9">
+                    <input type="text" class="input-public-max" ng-model="selectionContractCode" />
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">选址合同名称<span class="redColor">*</span></label>
+                <div class="col-sm-9">
+                    <input type="text" class="input-public-max" ng-model="selectionContractName" />
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">选址费支付情况<span class="redColor">*</span></label>
+                <div class="col-sm-9">
+                    <input type="text" class="input-public-max" ng-model="locationFeePayment" />
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">场租合同编号<span class="redColor">*</span></label>
+                <div class="col-sm-9">
+                    <input type="text" class="input-public-max" ng-model="aseAgreementCode" />
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">场地年租金(元/年)<span class="redColor">*</span></label>
+                <div class="col-sm-9">
+                    <input type="text" class="input-public-max" ng-model="stationRentYear" />
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">一次性场租赔补<span class="redColor">*</span></label>
+                <div class="col-sm-9">
+                    <input type="text" class="input-public-max" ng-model="disposablePayRent" />
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 eletRe-hint">
+            <div class="form-group">
+                <label class="elet-yichang control-label eletRe-hint">选址情况说明</label>
+                <div class="col-sm-10">
+                    <textarea rows="4" class="textarea-public-max" ng-model="stationTalkExplain"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="btn-btn-div">
+        <div class="btn-center">
+            <button class="btn btn-primary btn-block" ng-click="save()">保存</button>
+        </div>
+    </div>
+</div>

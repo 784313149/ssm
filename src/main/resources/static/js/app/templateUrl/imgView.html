@@ -1,0 +1,60 @@
+﻿<div class="img-has-border">
+    <meta charset="utf-8" />
+    <div class="form-horizontal clear-float">
+        <div class="col-md-2" ng-repeat="item in pdfList">
+            <div class="img-div img-check-cursor">
+                <a ng-href="{{ item.dataUrl }}" target="_blank">
+                    <img class="img-item" ng-src="{{ item.src }}" />
+                    <div class="operation-div">
+                        <div class="btn-download" title="删除" ng-if="isDelete" ng-click="delete(item, $index, 'pdf')"><i class="fa fa-trash-o"></i></div>
+                        <div class="btn-download" title="下载" ng-click="download(item)"><i class="fa fa-download"></i></div>
+                    </div>
+                    <div class="img-show-date">{{ item.createdDate }}</div>
+                </a>
+            </div>
+            <div class="img-name">{{ item.name }}</div>
+        </div>
+        <div class="col-md-2" ng-repeat="item in imgList">
+            <div class="img-div img-check-cursor">
+                <img class="img-item" lazy-src="{{ item.src }}" ng-click="checkBigImg($index,item.src)" err-src="../../Content/images/imgerr.png" />
+                <div class="operation-div">
+                    <div class="btn-download" title="删除" ng-if="isDelete" ng-click="delete(item, $index, 'img')"><i class="fa fa-trash-o"></i></div>
+                    <div class="btn-download" title="下载" ng-click="download(item)"><i class="fa fa-download"></i></div>
+                </div>
+                <div class="img-show-date">{{ item.createdDate }}</div>
+            </div>
+            <div class="img-name">{{ item.name }}</div>
+        </div>
+        <div class="col-md-2" ng-repeat="item in otherList">
+            <div class="img-div">
+                <img class="img-item" ng-src="{{ item.src }}"/>
+                <div class="operation-div">
+                    <div class="btn-download" title="删除" ng-if="isDelete" ng-click="delete(item, $index, 'file')"><i class="fa fa-trash-o"></i></div>
+                    <div class="btn-download" title="下载" ng-click="download(item)"><i class="fa fa-download"></i></div>
+                </div>
+                <div class="img-show-date">{{ item.createdDate }}</div>
+            </div>
+            <div class="img-name">{{ item.name }}</div>
+        </div>
+    </div>
+    <div class="img-view-dialog" ng-show="isPicture" ng-class="{ closing : isClose  }">
+        <div class="img-view-content" draggable ng-class="{ loadingImg : hasImg  }" ng-style="contentStyle" ng-mousedown="mousedownFun($event)">
+            <img class="dialog-img" ng-src="{{imgSrc}}" />
+        </div>
+        <!--<div class="dialog-tool">
+            <i class="download-dialog" ng-click="downloadImg()"><i class="fa fa-download"></i></i>
+            <i class="close-dialog" ng-click="backoff()"></i>
+            <i class="rotate-dialog" ng-click="rotate()"></i>
+            <i ng-show="preTrue" class="previous-dialog" ng-click="previous()"></i>
+            <i ng-show="nextTrue" class="next-dialog" ng-click="next()"></i>
+        </div>-->
+        <div class="img-tools">
+            <i class="fa fa-download" title="下载" ng-click="downloadImg()"></i>
+            <i class="fa fa-mail-reply" title="左旋转" ng-click="rotate()"></i>
+            <i class="fa fa-mail-forward" title="右旋转" ng-click="rotateRight()"></i>
+            <i class="fa fa-chevron-circle-left" title="上一张" ng-class="{ 'prohibit-click': !preTrue }" ng-click="previous()"></i>
+            <i class="fa fa-chevron-circle-right" title="下一张" ng-class="{ 'prohibit-click': !nextTrue }" ng-click="next()"></i>
+            <i class="fa fa-times-circle" title="关闭" ng-click="backoff()"></i>
+        </div>
+    </div>
+</div>

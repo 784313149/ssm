@@ -1,0 +1,87 @@
+﻿<div class="talking-about animation-content padding-content">
+    <meta charset="utf-8">
+    <form name="propertyForm" novalidate autocomplete="off">
+        <div class="form-horizontal clear-float">
+            <div class="col-sm-6 eletRe-hint">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label eletRe-hint">对应运营商租户</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="input-public-max" name="operatortenant" ng-model="operatortenant" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 eletRe-hint">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label eletRe-hint">是否分摊</label>
+                    <div class="col-sm-9">
+                        <div class="select-div">
+                            <select class="input-public-max" ng-model="isShare" ng-options="item.Value as item.Text for item in isNoDBList"></select>
+                            <i class="fa-select"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 eletRe-hint">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label eletRe-hint">产权方</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="input-public-max" name="changQun" ng-model="changQun" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 eletRe-hint">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label eletRe-hint">电信(年租金)</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="input-public-max" name="dxYearRentStr" ng-model="dxYearRentStr" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 eletRe-hint">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label eletRe-hint">移动(年租金)</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="input-public-max" name="ydYearRentStr" ng-model="ydYearRentStr" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 eletRe-hint">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label eletRe-hint">联通(年租金)</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="input-public-max" name="ltYearRentStr" ng-model="ltYearRentStr" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 eletRe-hint">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label eletRe-hint">备注信息</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="input-public-max" name="bak" ng-model="bak" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 eletRe-hint">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label eletRe-hint">分摊备忘录</label>
+                    <div class="col-sm-9">
+                        <button class="btn btn-default float-left" ng-click="selFile()">文件上传</button>
+                        <i class="fa fa-check greenColor fa-check-ok" ng-if="imgList.length > 0"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="btn-btn-div">
+            <div class="btn-center">
+                <button class="btn btn-primary btn-block" ng-click="saveOk()">保存</button>
+            </div>
+        </div>
+    </form>
+    <div class="img-view-div" ng-show="imgList.length > 0">
+        <div class="search-box">
+            <div class="search-title">文件列表</div>
+        </div>
+        <img-view file-list="imgList" delete-url="deleteUrl" is-delete="isDelete"></img-view>
+    </div>
+    <upload-file-dialog upload-url="uploadUrl" upload-post-data="uploadPostData" return-resp="returnResp" is-multiple="isMultiple" is-show-dialog="isShowDialog" post-state="postState" dialog-title="dialogTitle" model-url="modelUrl" file-accept="fileAccept" is-hint-success="isHintSuccess"></upload-file-dialog>
+</div>

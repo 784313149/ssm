@@ -1,0 +1,376 @@
+﻿<div class="talking-about animation-content padding-content">
+    <meta charset="utf-8" />
+    <div class="form-horizontal clear-float">
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">需求编码</label>
+                <div class="col-sm-8">
+                    <div class="input-public-max btnNoEdit">{{ requestId }}</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">建设方式<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <div class="select-div">
+                        <select class="input-public-max" ng-model="buildType" ng-options="item.Value as item.Text for item in buildTypeList"></select>
+                        <i class="fa-select"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">初勘设计院<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <div class="select-div">
+                        <select class="input-public-max" ng-model="ckDesginUnit" ng-options="item.Value as item.Text for item in ckDesginUnitList"></select>
+                        <i class="fa-select"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">初勘日期</label>
+                <div class="col-sm-8">
+                    <input type="text" class="input-public-max chukan-date" ng-model="ckDate" ng-blur="selCkDate()" />
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">经度<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <input type="text" class="input-public-max" ng-model="longitude" />
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">纬度<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <input type="text" class="input-public-max" ng-model="latitude" />
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">初勘铁塔类型<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <div class="select-div">
+                        <select class="input-public-max" ng-model="ckTowerDetailType" ng-options="item.Value as item.Text for item in ckTowerDetailTypeList"></select>
+                        <i class="fa-select"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 eletRe-hint">
+            <div class="form-group">
+                <label class="elet-yichang control-label eletRe-hint">铁塔类型详细描述<span class="redColor">*</span></label>
+                <div class="col-sm-10">
+                    <textarea rows="2" class="textarea-public-max" ng-model="towerDetailTypeDesc"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">初勘塔基类型<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <div class="select-div">
+                        <select class="input-public-max" ng-model="ckColumnFootType" ng-options="item.Value as item.Text for item in ckColumnFootTypeList"></select>
+                        <i class="fa-select"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 eletRe-hint">
+            <div class="form-group">
+                <label class="elet-yichang control-label eletRe-hint">塔基类型详细描述<span class="redColor">*</span></label>
+                <div class="col-sm-10">
+                    <textarea rows="2" class="textarea-public-max" ng-model="ckColumnFootTypeDesc"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">是否地勘<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <div class="select-div">
+                        <select class="input-public-max" ng-model="isNeedLdk" ng-options="item.Value as item.Text for item in isNeedLdkList"></select>
+                        <i class="fa-select"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">地勘单位</label>
+                <div class="col-sm-8">
+                    <div class="select-div">
+                        <select class="input-public-max" ng-model="dkDesignInstitute" ng-options="item.Value as item.Text for item in dkDesignInstituteList"></select>
+                        <i class="fa-select"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">地勘次数<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <input type="text" class="input-public-max" ng-model="dkTimes" />
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">初勘机房类型<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <div class="select-div">
+                        <select class="input-public-max" ng-model="ckRoomType" ng-options="item.Value as item.Text for item in ckRoomTypeList"></select>
+                        <i class="fa-select"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 eletRe-hint">
+            <div class="form-group">
+                <label class="elet-yichang control-label eletRe-hint">机房类型详细描述<span class="redColor">*</span></label>
+                <div class="col-sm-10">
+                    <textarea rows="2" class="textarea-public-max" ng-model="ckRoomTypeDesc"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 eletRe-hint">
+            <div class="form-group">
+                <label class="elet-yichang control-label eletRe-hint">初勘电源情况描述<span class="redColor">*</span></label>
+                <div class="col-sm-10">
+                    <textarea rows="2" class="textarea-public-max" ng-model="ckPowerSsDesc"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">站址所在地风压<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <input type="text" class="input-public-max" ng-model="windPressure" />
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">设计风压<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <input type="text" class="input-public-max" ng-model="designWindPressure" />
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">新建杆塔高度<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <input type="text" class="input-public-max" ng-model="newTowerHeight" />
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">天线挂高<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <input type="text" class="input-public-max" ng-model="antennaHeight" />
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">天线数量<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <input type="text" class="input-public-max" ng-model="antennaNum" />
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 eletRe-hint">
+            <div class="form-group">
+                <label class="elet-yichang control-label eletRe-hint">天线尺寸型号描述</label>
+                <div class="col-sm-10">
+                    <textarea rows="2" class="textarea-public-max" ng-model="antennaSizeModelDesc"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">电力引入方式<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <div class="select-div">
+                        <select class="input-public-max" ng-model="elecLeadWay" ng-options="item.Value as item.Text for item in elecLeadWayList"></select>
+                        <i class="fa-select"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">是否需要电力设计<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <div class="select-div">
+                        <select class="input-public-max" ng-model="isNeedElecDesign" ng-options="item.Value as item.Text for item in isNeedElecDesignList"></select>
+                        <i class="fa-select"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">电力设计院</label>
+                <div class="col-sm-8">
+                    <div class="select-div">
+                        <select class="input-public-max" ng-model="elecDesignInstitute" ng-options="item.Value as item.Text for item in elecDesignInstituteList"></select>
+                        <i class="fa-select"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 eletRe-hint">
+            <div class="form-group">
+                <label class="elet-yichang control-label eletRe-hint">电力路由方案简述<span class="redColor">*</span></label>
+                <div class="col-sm-10">
+                    <textarea rows="2" class="textarea-public-max" ng-model="elecRouteWayDesc"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">电力预估造价<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <input type="text" class="input-public-max" ng-model="elecTimatePay" />
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">区县运营商超标电力审批<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <div class="select-div">
+                        <select class="input-public-max" ng-model="overproofElecApproval" ng-options="item.Value as item.Text for item in overproofElecApprovalList"></select>
+                        <i class="fa-select"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">市级运营商超标电力审批<span class="redColor" ng-if="ckDate">*</span></label>
+                <div class="col-sm-8">
+                    <div class="select-div">
+                        <select class="input-public-max" ng-model="isCheckSdzjOperator" ng-options="item.Value as item.Text for item in isCheckSdzjOperatorList"></select>
+                        <i class="fa-select"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">CRM需求订单编号<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <input type="text" class="input-public-max" ng-model="requestCode" placeholder="未立项请填写CRM未立项" />
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">立项日期</label>
+                <div class="col-sm-8">
+                    <input type="text" class="input-public-max chukan-date" ng-model="prjDate" />
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">立项方式<span class="redColor">*</span></label>
+                <div class="col-sm-8">
+                    <div class="select-div">
+                        <select class="input-public-max" ng-model="prjType" ng-options="item.Value as item.Text for item in prjTypeList"></select>
+                        <i class="fa-select"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">PMS项目编码</label>
+                <div class="col-sm-8">
+                    <input type="text" class="input-public-max" ng-model="prjCode" placeholder="未立项时请填写PMS未立项" />
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 eletRe-hint">
+            <div class="form-group">
+                <label class="elet-yichang control-label eletRe-hint">PMS站点名称</label>
+                <div class="col-sm-10">
+                    <textarea rows="2" class="textarea-public-max" ng-model="prjName"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">PMS站点编码</label>
+                <div class="col-sm-8">
+                    <input type="text" class="input-public-max" ng-model="prjStationCode" />
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">出图日期</label>
+                <div class="col-sm-8">
+                    <input type="text" class="input-public-max chutu-date" ng-model="ctDate" ng-blur="selCtDate()" ng-disabled="!ckDate" ng-class="{ btnNoEdit : !ckDate }" />
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 eletRe-hint">
+            <div class="form-group">
+                <label class="col-sm-3 control-label eletRe-hint">会审日期</label>
+                <div class="col-sm-8">
+                    <input type="text" class="input-public-max huishen-date" ng-model="hsDate" ng-blur="selHsDate()" ng-disabled="!ctDate" ng-class="{ btnNoEdit : !ctDate }" />
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 eletRe-hint">
+            <div class="form-group">
+                <label class="elet-yichang control-label eletRe-hint">详细地址<span class="redColor">*</span></label>
+                <div class="col-sm-10">
+                    <textarea rows="2" class="textarea-public-max" ng-model="address"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 eletRe-hint">
+            <div class="form-group">
+                <label class="elet-yichang control-label eletRe-hint">建设内容</label>
+                <div class="col-sm-10">
+                    <textarea rows="2" class="textarea-public-max" ng-model="buildContent"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 eletRe-hint">
+            <div class="form-group">
+                <label class="elet-yichang control-label eletRe-hint">会审意见</label>
+                <div class="col-sm-10">
+                    <textarea rows="2" class="textarea-public-max" ng-model="hsSuggest"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="btn-btn-div">
+        <div class="btn-center">
+            <button class="btn btn-primary btn-block" ng-click="save()">保存</button>
+        </div>
+    </div>
+</div>
